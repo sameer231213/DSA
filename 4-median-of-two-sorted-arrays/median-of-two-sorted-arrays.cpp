@@ -15,7 +15,7 @@ public:
             return merge[m/2];
         }
         else{
-            return (merge[m / 2-1]+merge[m/2])/2.0;
+            return (merge[m/2-1]+merge[m/2])/2.0;
         }
     }
 };
