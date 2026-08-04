@@ -1,9 +1,8 @@
 class Solution {
 public:
     vector<int> findMissingElements(vector<int>& nums) {
-     sort(nums.begin(),nums.end());
-     int min=nums[0];
-     int max=nums[nums.size()-1];
+   int min = *min_element(nums.begin(), nums.end());
+        int max = *max_element(nums.begin(), nums.end());
      vector<int>ans;
      for(int i=min;i<max;i++){
         ans.push_back(i);
