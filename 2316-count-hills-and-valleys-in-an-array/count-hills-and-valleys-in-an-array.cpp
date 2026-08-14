@@ -3,9 +3,11 @@ public:
     int countHillValley(vector<int>& nums) {
         vector<int> v;
         // Remove consecutive duplicates
-        for (int x : nums) {
-            if (v.empty() || v.back() != x) {
-                v.push_back(x);
+         v.push_back(nums[0]);
+
+        for(int i = 1; i < nums.size(); i++) {
+            if(nums[i] != nums[i-1]) {
+                v.push_back(nums[i]);
             }
         }
         int ans = 0;
